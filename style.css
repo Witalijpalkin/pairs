@@ -1,0 +1,94 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: dimgray;
+}
+
+.container {
+	max-width: 90%;
+	margin: 30px auto;
+	background-color: #e4e4e4;
+	padding: 15px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+.form {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.list {
+	display: grid;
+	/*grid-template-columns: repeat(10, 1fr);*/
+	margin-bottom: 20px;
+	justify-content: center;
+	list-style: none;
+	gap: 30px;
+	
+}
+
+.card {
+	width: 100%;
+	height: 200px;
+	position: relative;
+	cursor: pointer;
+	border-radius: 10%;
+	overflow: hidden;
+}
+
+
+
+.card__back,
+.card__front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transition: all .3s ease-in-out;
+}
+
+.card__front {
+	
+	background-color:mediumorchid;
+	background-image: url(./img/okie-dokie.png);
+	background-size: 50px;
+	transform: perspective(600px) rotateY(0deg);
+}
+.card__back {
+	transform: perspective(600px) rotateY(180deg);
+	background-color: mediumorchid;
+}
+.card__back-content {	
+	font-size: 80px;
+}
+
+.card-active-front {
+	transform: perspective(600px) rotateY(-180deg);
+}
+.card-active-back {
+	transform: perspective(600px) rotateY(0deg);
+}
+
+.success {
+	background-color: rgb(37, 173, 40);
+}
+
+.timer {
+	text-align: center;
+	margin-bottom: 10px;
+	background-color: transparent;
+	color: black;
+	width: 100px;
+	margin: 0 auto;
+	font-size: 25px;
+}
